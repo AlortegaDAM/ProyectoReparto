@@ -1,6 +1,8 @@
 
 package model;
 
+import com.mycompany.sistemareparto.model.Cliente;
+import com.mycompany.sistemareparto.model.ClienteDAO;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;

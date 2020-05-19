@@ -1,6 +1,8 @@
 
 package model;
 
+import com.mycompany.sistemareparto.model.RepartidorDAO;
+import com.mycompany.sistemareparto.model.Repartidor;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -17,22 +19,22 @@ public class RepartidorDAOTest {
         
     
     }
-    */
+    
     @Test
     public void addPrueba(){
         
         RepartidorDAO rpdao=new RepartidorDAO();
-        Repartidor rp= new Repartidor( "Daniel", "Tardes");
+        Repartidor rp= new Repartidor( "Prueba", "Ninguno");
         rpdao.add(rp);
         System.out.println(rp);
     
     } 
-/*
+*/
     @Test
     public void updatePrueba(){
         
         RepartidorDAO rpdao=new RepartidorDAO();
-        Repartidor rp= new Repartidor( "Juan", "Calle La Perla");
+        Repartidor rp= new Repartidor("Arturo", "Jefe");
         rp.setNombre("Pamela");
         rp.setTurno("Tarde");
         rpdao.update(rp);
@@ -40,7 +42,7 @@ public class RepartidorDAOTest {
         System.out.println(rp);
     
     }
-    
+    /*
     @Test
     public void loadPrueba() {
         RepartidorDAO rpdao=new RepartidorDAO();

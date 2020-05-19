@@ -1,5 +1,5 @@
 
-package model;
+package com.mycompany.sistemareparto.model;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -37,7 +37,7 @@ public class ClienteDAO implements CRUD{
                 r=ps.executeUpdate();
                 
             }catch(SQLException ex) {
-            Logger.getLogger(ProductoDAO.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
             
         }
@@ -67,7 +67,7 @@ public class ClienteDAO implements CRUD{
             r=ps.executeUpdate();
          
         }catch(SQLException ex) {
-            Logger.getLogger(ProductoDAO.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         return r;
@@ -88,7 +88,7 @@ public class ClienteDAO implements CRUD{
        ps.executeUpdate();
        }
        catch(SQLException ex){
-           Logger.getLogger(ProductoDAO.class.getName()).log(Level.SEVERE, null, ex);
+           Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
        }
     }
 
@@ -118,7 +118,7 @@ public class ClienteDAO implements CRUD{
             
             }
             }catch(SQLException ex) {
-            Logger.getLogger(ProductoDAO.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
         return elementos;
     }

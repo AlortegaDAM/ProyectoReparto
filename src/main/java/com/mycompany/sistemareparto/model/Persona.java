@@ -1,5 +1,5 @@
 
-package model;
+package com.mycompany.sistemareparto.model;
 
 import java.util.Objects;
 

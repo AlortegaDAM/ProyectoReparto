@@ -1,26 +1,26 @@
 package mainp;
 
 import java.sql.Connection;
-import model.Cliente;
-import model.Conexion;
-import model.Producto;
-import model.ProductoDAO;
+import com.mycompany.sistemareparto.model.Cliente;
+import com.mycompany.sistemareparto.model.Conexion;
+import com.mycompany.sistemareparto.model.Producto;
+import com.mycompany.sistemareparto.model.ProductoDAO;
 
 public class MainP {
 
-    public static void main(String[] args) {
+    //public static void main(String[] args) {
 
         
         
         
         
-        Cliente p=new Cliente(1,"Alba","El brillante",600000000,"ALBA");
-        System.out.println(p.getId());
+        //Cliente p=new Cliente("Alba","El brillante",600000000,"ALBA");
+       // System.out.println(p.getId());
       
-        System.out.print(p);
+      //  System.out.print(p);
         
         
         
-    }
+   // }
 
-}
+        }

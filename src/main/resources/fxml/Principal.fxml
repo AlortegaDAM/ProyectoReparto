@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+         <menus>
+            <Menu id="Pedidos" mnemonicParsing="false" text="Pedidos">
+               <items>
+                  <MenuItem id="NuevoPedido" mnemonicParsing="false" text="Nuevo pedido" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Preferences…" />
+               </items>
+            </Menu>
+            <Menu id="Gestor" mnemonicParsing="false" text="Gestor de información">
+               <items>
+                  <MenuItem id="Productos" mnemonicParsing="false" text="Productos" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem id="Repartidores" mnemonicParsing="false" text="Repartidores" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem id="Clientes" mnemonicParsing="false" text="Clientes" />
+               </items>
+            </Menu>
+            <Menu id="Salir" mnemonicParsing="false" text="Salir">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+               </items>
+            </Menu>
+         </menus>
+         <opaqueInsets>
+            <Insets left="10.0" top="10.0" />
+         </opaqueInsets>
+      </MenuBar>
+   </top>
+   <center>
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;" text="Drag components from Library here…" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,5 +1,7 @@
 
 package model;
+import com.mycompany.sistemareparto.model.Producto;
+import com.mycompany.sistemareparto.model.ProductoDAO;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -47,7 +49,7 @@ public class ProductoDAOTest {
         lista = pdao.load();
         Iterator iter = lista.iterator();
             while (iter.hasNext())
-        System.out.println(iter.next());
+                System.out.println(iter.next());
         
     }
     
