@@ -1,7 +1,7 @@
 package com.mycompany.sistemareparto.controller;
 
 import com.mycompany.sistemareparto.App;
-//import com.mycompany.sistemareparto.model.Connection;
+import com.mycompany.sistemareparto.model.Conexion;
 //import com.mycompany.sistemareparto.model.dao.ContactDao;
 import com.mycompany.sistemareparto.utils.MapEntry;
 //import com.mycompany.sistemareparto.utils.PreferencesUtil;
@@ -19,12 +19,12 @@ public class AppController extends Controllers{
     public Scenes backScene;
     public Scenes currentScene;
     
-   /* public static Connection currentConnection;
+   // public static Connection currentConnection;
 
     @Override
     void onLoad() {
         currentConnection=PreferencesUtil.getPreference();
-    }*/
+    }
  
     /**
      * Recibe la url de una archivo FXML (de la carpeta resources) y devuelve su contenedor y controlador
@@ -115,6 +115,14 @@ public class AppController extends Controllers{
     @FXML
     public void pedidosMenu(){
         changeScene(Scenes.PEDIDOS);
+    }
+    @FXML
+    public void clientesMenu(){
+        changeScene(Scenes.CLIENTES);
+    }
+    @FXML
+    public void principalMenu(){
+        changeScene(Scenes.PRINCIPAL);
     }
     
     /*@FXML

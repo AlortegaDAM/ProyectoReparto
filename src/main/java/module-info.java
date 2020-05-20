@@ -9,5 +9,16 @@ module com.mycompany.sistemareparto {
 
     
     opens com.mycompany.sistemareparto to javafx.fxml;
+    opens com.mycompany.sistemareparto.controller to javafx.fxml;
     exports com.mycompany.sistemareparto;
+    exports com.mycompany.sistemareparto.model;  //para que JAXB pueda acceder a Connection y Connection wrapper
+    
+    
+    
+    
+    //opens com.mycompany.sistemareparto.utils to java.xml.bind; //Para que JAXB pueda ejecutarse en XMLUtil
+
+    //opens com.mycompany.sistemareparto.model to java.xml.bind; //Para que JAXB pueda ejecutarse en ConnectionWrapper
+    
+
 }

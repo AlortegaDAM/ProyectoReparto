@@ -34,7 +34,7 @@ public class App extends Application {
         
         controller=(AppController)m.getValue();
         controller.setMainApp(this);
-        controller.changeScene(Scenes.PRINCIPAL);
+        controller.changeScene(Scenes.CLIENTES);
         stage.show();    
     }
 

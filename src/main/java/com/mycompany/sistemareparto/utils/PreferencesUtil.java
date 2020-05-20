@@ -1,18 +1,18 @@
 /*package com.mycompany.sistemareparto.utils;
 //PENDIENTE DE MIGRAR
 import com.mycompany.sistemareparto.App;
-import com.mycompany.sistemareparto.model.Connection;
+import com.mycompany.sistemareparto.model.Conexion;
 import java.util.List;
 import java.util.prefs.Preferences;
 
 public class PreferencesUtil {
-    public static Connection getPreference(){
-        Connection result=null;
+    public static Conexion getPreference(){
+        Conexion result=null;
         Preferences prefs= Preferences.userNodeForPackage(App.class);
         String nameC=prefs.get("conn", null);
         if(nameC!=null){
-            List<Connection> conns=XMLUtil.loadDataXML();
-            Connection search=new Connection(nameC);
+            List<Conexion> conns=XMLUtil.loadDataXML();
+            Conexion search=new Conexion(nameC);
             int index=conns.indexOf(search);
             if(index>-1){
                 result=conns.get(index);
