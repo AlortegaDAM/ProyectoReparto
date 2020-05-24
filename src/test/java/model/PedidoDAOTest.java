@@ -13,8 +13,12 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import org.junit.Test;
+
+
 public class PedidoDAOTest {
-    
+    PedidoDAO pdao;
+    Pedido pedido;
+    List<Pedido> listap;
     
     @Test
     public void addPedido(){
@@ -49,4 +53,13 @@ public class PedidoDAOTest {
         pdao.delete(2);
     }
     */
+    @Test
+    public void updatePedido(){
+        listap=pdao.load();
+        pedido=listap.get(1);
+        pedido.setIdRepartidor(1);
+        pedido.setIdCliente(2);
+        pdao.update(pedido);
+        
+    }
 }

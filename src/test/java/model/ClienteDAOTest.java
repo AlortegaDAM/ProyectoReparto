@@ -10,6 +10,11 @@ import org.junit.Test;
 
 
 public class ClienteDAOTest {
+    
+    List<Cliente> listacli;
+    
+    
+    
     /*@Test
     public void deletePrueba(){
         
@@ -28,14 +33,15 @@ public class ClienteDAOTest {
         System.out.println(c);
     
     } 
-/*
-    @Test
+
+    /*@Test
     public void updatePrueba(){
         
         ClienteDAO cdao=new ClienteDAO();
-        Cliente c= new Cliente(1, "Juan", "Calle La Perla", 654212304, "Juancliente@prueba1.es");
-        c.setNombre("Pamela");
-        c.setMail("Pamela@mail.es");
+        listacli=cdao.load();
+        Cliente c= listacli.get(2);
+        c.setNombre("Nombreupdate");
+        c.setMail("Update@mail.es");
         cdao.update(c);
         
         System.out.println(c);

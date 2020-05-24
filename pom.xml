@@ -65,7 +65,7 @@
 
         </executions>
         <configuration>
-          <mainClass>com.mycompany.sistemareparto.App</mainClass>
+          <mainClass>com.mycompany.sistemareparto.Executable</mainClass>
 
         </configuration>
       </plugin>

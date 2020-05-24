@@ -10,6 +10,7 @@ import org.junit.Test;
 
 
 public class RepartidorDAOTest {
+    List<Repartidor> listarepartidor;
     
     /*@Test
     public void deletePrueba(){
@@ -34,9 +35,10 @@ public class RepartidorDAOTest {
     public void updatePrueba(){
         
         RepartidorDAO rpdao=new RepartidorDAO();
-        Repartidor rp= new Repartidor("Arturo", "Jefe");
-        rp.setNombre("Pamela");
-        rp.setTurno("Tarde");
+        listarepartidor=rpdao.load();
+        Repartidor rp= listarepartidor.get(1);
+        rp.setNombre("Repartidor update");
+        rp.setTurno("Update");
         rpdao.update(rp);
         
         System.out.println(rp);

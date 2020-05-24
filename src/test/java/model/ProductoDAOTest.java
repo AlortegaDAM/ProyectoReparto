@@ -9,6 +9,7 @@ import org.junit.Test;
 
 
 public class ProductoDAOTest {
+    List<Producto> listaproducto;
     
     /*@Test
     public void deletePrueba(){
@@ -29,11 +30,12 @@ public class ProductoDAOTest {
     
     } 
 
-    /*@Test
+    @Test
     public void updatePrueba(){
         
         ProductoDAO pdao=new ProductoDAO();
-        Producto  p= new Producto( 5, "Salmorejo", "Plato frío", 6.5);
+        listaproducto=pdao.load();
+        Producto  p= listaproducto.get(2);
         p.setCodigo(10);
         p.setDescripcion("Mu rico");
         p.setId(6);
