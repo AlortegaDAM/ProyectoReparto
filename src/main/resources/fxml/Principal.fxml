@@ -10,24 +10,24 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"fx:controller="com.mycompany.sistemareparto.controller.AppController">
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.sistemareparto.controller.AppController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
          <menus>
             <Menu id="Pedidos" mnemonicParsing="false" text="Pedidos">
                <items>
-                  <MenuItem id="NuevoPedido" mnemonicParsing="false" text="Nuevo pedido" />
+                  <MenuItem id="NuevoPedido" mnemonicParsing="false" onAction="#pantallaPedido" text="Nuevo pedido" />
                   <SeparatorMenuItem mnemonicParsing="false" />
                   <MenuItem mnemonicParsing="false" text="Preferences…" />
                </items>
             </Menu>
             <Menu id="Gestor" mnemonicParsing="false" text="Gestor de información">
                <items>
-                  <MenuItem id="Productos" mnemonicParsing="false" text="Productos" />
+                  <MenuItem id="Productos" mnemonicParsing="false" onAction="#pantallaProducto" text="Productos" />
                   <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem id="Repartidores" mnemonicParsing="false" text="Repartidores" />
+                  <MenuItem id="Repartidores" mnemonicParsing="false" onAction="#pantallaRepartidor" text="Repartidores" />
                   <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem id="Clientes" mnemonicParsing="false" text="Clientes" />
+                  <MenuItem id="Clientes" mnemonicParsing="false" onAction="#pantallaCliente" text="Clientes" />
                </items>
             </Menu>
             <Menu id="Salir" mnemonicParsing="false" text="Salir">
@@ -44,7 +44,7 @@
    <center>
       <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="&#10;" text="Drag components from Library here…" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
+            <Label alignment="CENTER" layoutX="155.0" layoutY="177.0" style="#10;" text="Bienvenido al Sistema de Reparto" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
                <font>
                   <Font size="18.0" />
                </font>

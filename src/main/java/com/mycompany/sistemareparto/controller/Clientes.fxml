@@ -13,7 +13,7 @@
    <children>
       <Pane layoutX="156.0" layoutY="207.0" prefHeight="178.0" prefWidth="430.0">
          <children>
-            <TableView id="tablacliente" editable="true" layoutX="9.0" prefHeight="178.0" prefWidth="418.0">
+            <TableView id="tablacliente" fx:id="tablacli" editable="true" layoutX="9.0" prefHeight="178.0" prefWidth="418.0">
               <columns>
                 <TableColumn prefWidth="75.0" text="ID" />
                   <TableColumn prefWidth="75.0" text="NOMBRE" />
@@ -34,30 +34,30 @@
                   <Insets left="30.0" top="10.0" />
                </opaqueInsets>
             </TextArea>
-            <TextField id="nombrecliente" layoutX="188.0" layoutY="19.0" />
+            <TextField id="nombrecliente" fx:id="nombrecli" layoutX="188.0" layoutY="19.0" />
             <TextArea layoutX="31.0" layoutY="60.0" prefHeight="25.0" prefWidth="115.0" promptText="Dirección" text="Dirección:">
                <opaqueInsets>
                   <Insets left="30.0" top="10.0" />
                </opaqueInsets>
             </TextArea>
-            <TextField id="direccioncliente" layoutX="188.0" layoutY="67.0" />
+            <TextField id="direccioncliente" fx:id="direccioncli" layoutX="188.0" layoutY="67.0" />
             <TextArea layoutX="31.0" layoutY="104.0" prefHeight="25.0" prefWidth="115.0" promptText="Móvil" text="Móvil:">
                <opaqueInsets>
                   <Insets left="30.0" top="10.0" />
                </opaqueInsets>
             </TextArea>
-            <TextField id="movilcliente" layoutX="188.0" layoutY="111.0" />
+            <TextField id="movilcliente" fx:id="movilcli" layoutX="188.0" layoutY="111.0" />
             <TextArea layoutX="31.0" layoutY="149.0" prefHeight="25.0" prefWidth="115.0" promptText="Mail" text="Mail:">
                <opaqueInsets>
                   <Insets left="30.0" top="10.0" />
                </opaqueInsets>
             </TextArea>
-            <TextField id="mailcliente" layoutX="188.0" layoutY="156.0" />
+            <TextField id="mailcliente" fx:id="mailcli" layoutX="188.0" layoutY="156.0" />
          </children>
       </Pane>
-      <Button id="nuevocliente" layoutX="59.0" layoutY="236.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="68.0" text="Nuevo" />
-      <Button id="guardarcliente" layoutX="59.0" layoutY="269.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="68.0" text="Guardar" />
-      <Button id="actualizarcliente" layoutX="59.0" layoutY="303.0" mnemonicParsing="false" text="Actualizar" />
-      <Button id="eliminarcliente" layoutX="59.0" layoutY="335.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="68.0" text="Eliminar" />
+      <Button id="nuevocliente" layoutX="59.0" layoutY="236.0" mnemonicParsing="false" onAction="#nuevoCliente" prefHeight="26.0" prefWidth="68.0" text="Nuevo" />
+      <Button id="guardarcliente" layoutX="59.0" layoutY="269.0" mnemonicParsing="false" onAction="#guardarCliente" prefHeight="26.0" prefWidth="68.0" text="Guardar" />
+      <Button id="actualizarcliente" layoutX="59.0" layoutY="303.0" mnemonicParsing="false" onAction="#actualizarCliente" text="Actualizar" />
+      <Button id="eliminarcliente" layoutX="59.0" layoutY="335.0" mnemonicParsing="false" onAction="#borrarCliente" prefHeight="26.0" prefWidth="68.0" text="Eliminar" />
    </children>
 </AnchorPane>

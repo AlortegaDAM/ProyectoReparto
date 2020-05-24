@@ -20,6 +20,10 @@ public class PedidoTest {
         Producto  dos= new Producto( 6, "Flamenquin", "de pollo", 10);
         dos.setCantidad(4);
         
+        p.addProducto(uno);
+        p.addProducto(dos);
+        
+        
         
     
     

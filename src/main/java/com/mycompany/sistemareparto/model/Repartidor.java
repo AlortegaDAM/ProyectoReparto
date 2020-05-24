@@ -5,6 +5,8 @@ package com.mycompany.sistemareparto.model;
 public class Repartidor extends Persona {
     
     private String turno;
+    private Moto moto;
+    private int idMoto;
     
     public Repartidor(){
         this.id=-1;
@@ -13,6 +15,7 @@ public class Repartidor extends Persona {
     public Repartidor(String turno) {
         this.id=-1;
         this.turno = turno;
+        
     }
     
     public Repartidor(String nombre, String turno){
@@ -26,6 +29,22 @@ public class Repartidor extends Persona {
 
     public void setTurno(String turno) {
         this.turno = turno;
+    }
+
+    public Moto getMoto() {
+        return moto;
+    }
+
+    public void setMoto(Moto moto) {
+        if(moto!=null){
+            if(moto instanceof Moto){
+                if(moto.isEn_uso()==false){
+                this.moto = moto;
+                moto.setEn_uso(true);
+                }
+            }
+        }
+        
     }
 
     @Override

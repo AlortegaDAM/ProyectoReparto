@@ -7,13 +7,14 @@ package com.mycompany.sistemareparto.controller;
  */
 public enum Scenes{
     //ROOT("view/root"), 
-    PRINCIPAL("view/Principal"), //Es el nombre de la plantilla .fxml
+    PRINCIPAL("fxml/Principal"), //Es el nombre de la plantilla .fxml
     //CONN("view/connections"),
-    PEDIDOS("view/Pedidos"),
-    GESTOR("view/Gestor"),
-    REPARTIDORES("view/Repartidores"),
-    CLIENTES("view/Clientes"),
-    PRODUCTOS("view/Productos");
+    PRIMARY("fxml/Primary"),
+    PEDIDOS("fxml/Pedidos"),
+    GESTOR("fxml/Gestor"),
+    REPARTIDORES("fxml/Repartidores"),
+    CLIENTES("fxml/Clientes"),
+    PRODUCTOS("fxml/Productos");
 
     private String url;
  

@@ -18,17 +18,17 @@ public class ProductoDAOTest {
         System.out.println(p);
     
     }
-    
+    */
     @Test
     public void addPrueba(){
         
         ProductoDAO pdao=new ProductoDAO();
-        Producto  p= new Producto( 5, "Salmorejo", "Plato frío", 6.5);
+        Producto  p= new Producto( 5, "Gazpacho", "Fresquito", 6.5);
         pdao.add(p);
         System.out.println(p);
     
     } 
-*/
+
     /*@Test
     public void updatePrueba(){
         
@@ -41,7 +41,7 @@ public class ProductoDAOTest {
         
         System.out.println(p);
     
-    } */ 
+    } /* 
     @Test
     public void loadPrueba() {
         ProductoDAO pdao=new ProductoDAO();
@@ -51,6 +51,6 @@ public class ProductoDAOTest {
             while (iter.hasNext())
                 System.out.println(iter.next());
         
-    }
+    }*/
     
 }

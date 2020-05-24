@@ -6,8 +6,11 @@
     <version>1.0-SNAPSHOT</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.finalName>SistemaReparto</project.build.finalName>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <javafx.version>14</javafx.version>
+        <mainClass>com.mycompany.sistemareparto.Executable</mainClass>
     </properties>
     <dependencies>
         <dependency>
@@ -32,6 +35,11 @@
             <version>14</version>
         </dependency>
         <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+            <version>2.3.2</version>
+        </dependency>
+        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.19</version>
@@ -45,6 +53,23 @@
     <build>
         <plugins>
             <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.6.0</version>
+        <executions>
+            <execution>
+                <goals>
+                    <goal>java</goal>
+                </goals>
+            </execution>
+
+        </executions>
+        <configuration>
+          <mainClass>com.mycompany.sistemareparto.App</mainClass>
+
+        </configuration>
+      </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.0</version>
@@ -55,7 +80,7 @@
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
-                <version>0.0.3</version>
+                <version>0.0.4</version>
                 <configuration>
                     <mainClass>com.mycompany.sistemareparto.App</mainClass>
                 </configuration>

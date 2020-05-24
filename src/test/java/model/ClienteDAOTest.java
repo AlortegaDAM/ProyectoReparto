@@ -17,18 +17,18 @@ public class ClienteDAOTest {
         c.delete(2);
         
     
-    }
-    /*
+    }*/
+    
     @Test
     public void addPrueba(){
         
         ClienteDAO cdao=new ClienteDAO();
-        Cliente  c= new Cliente( 5, "Juan", "Barrio nuevo", 600234231, "Juancliente@prueba1.es");
+        Cliente  c= new Cliente( "Jaime", "Calle la palma", 600777731, "Jaime@prueba.es");
         cdao.add(c);
         System.out.println(c);
     
     } 
-
+/*
     @Test
     public void updatePrueba(){
         
@@ -41,7 +41,7 @@ public class ClienteDAOTest {
         System.out.println(c);
     
     }
-    */
+    
     @Test
     public void loadPrueba() {
         ClienteDAO cdao=new ClienteDAO();
@@ -51,5 +51,5 @@ public class ClienteDAOTest {
             while (iter.hasNext())
         System.out.println(iter.next());
         
-    }
+    }*/
 }

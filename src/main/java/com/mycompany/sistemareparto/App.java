@@ -1,7 +1,8 @@
 package com.mycompany.sistemareparto;
 
 import com.mycompany.sistemareparto.controller.AppController;
-import com.mycompany.sistemareparto.controller.Controllers;
+import static com.mycompany.sistemareparto.controller.AppController.loadFXML;
+import javafx.fxml.FXMLLoader;
 import com.mycompany.sistemareparto.controller.Scenes;
 import com.mycompany.sistemareparto.utils.MapEntry;
 import javafx.application.Application;
@@ -22,7 +23,7 @@ public class App extends Application {
      */
     public AppController controller;
 
-    @Override
+    /*@Override
     public void start(Stage stage) throws IOException {
        
        MapEntry<Parent, Controllers> m=AppController.loadFXML(Scenes.PRINCIPAL.getUrl());
@@ -34,10 +35,25 @@ public class App extends Application {
         
         controller=(AppController)m.getValue();
         controller.setMainApp(this);
-        controller.changeScene(Scenes.CLIENTES);
+        controller.changeScene(Scenes.PRIMARY);
         stage.show();    
+    }*/
+    @Override
+    public void start (Stage stage) throws IOException{
+        scene=new Scene(loadFXML("Principal"), 640, 400);
+        stage.setScene(scene);
+        stage.show();
     }
-
+    /*
+    public void setRoot(String fxml)throws IOException{
+        scene.setRoot(loadFXML(fxml));
+    }
+    public static Parent loadFXML(String fxml) throws IOException{
+        //FXMLLoader fxmlLoader = new FXMLLoader (App.class.getResource(fxml + ".fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader (App.class.getResource(fxml + ".fxml"));
+        return fxmlLoader.load();
+    }
+*/
     public static void main(String[] args) {
         launch();
     }

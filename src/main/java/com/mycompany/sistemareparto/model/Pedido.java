@@ -10,10 +10,11 @@ public class Pedido {
     private double total;
     private int idCliente;
     private int idRepartidor;
-    public List<Producto> productos;
+    private List<Producto> productos;
 
     public Pedido() {
         this.idPedido= -1;
+        this.productos= new ArrayList<>();
     }
 
     public Pedido(int idCliente, int idRepartidor) {
@@ -39,6 +40,10 @@ public class Pedido {
            }
         
         return total;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
     }
     public int getIdCliente() {
         return idCliente;

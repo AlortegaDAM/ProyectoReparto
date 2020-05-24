@@ -35,6 +35,7 @@ public class ClienteDAO implements CRUD{
                 ps.setString(4,c.getMail());
                 //ejecutar
                 r=ps.executeUpdate();
+                con.close();
                 
             }catch(SQLException ex) {
             Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
@@ -65,6 +66,7 @@ public class ClienteDAO implements CRUD{
             
             //ejecutamos
             r=ps.executeUpdate();
+            con.close();
          
         }catch(SQLException ex) {
             Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
@@ -86,6 +88,7 @@ public class ClienteDAO implements CRUD{
        ps.setInt(1,id);
        //ejecutamos
        ps.executeUpdate();
+       con.close();
        }
        catch(SQLException ex){
            Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
@@ -116,7 +119,7 @@ public class ClienteDAO implements CRUD{
                 
                 elementos.add(c);
             
-            }
+            }con.close();
             }catch(SQLException ex) {
             Logger.getLogger(ClienteDAO.class.getName()).log(Level.SEVERE, null, ex);
             }

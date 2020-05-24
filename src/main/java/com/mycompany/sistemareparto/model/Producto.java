@@ -11,6 +11,7 @@ public class Producto {
     public double subtotal;
 
     public Producto() {
+        this.id=-1;
     }
     
     public Producto(int codigo, String nombre, String descripcion, double precio) {

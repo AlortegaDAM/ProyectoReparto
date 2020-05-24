@@ -5,8 +5,10 @@
  */
 package com.mycompany.sistemareparto.controller;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
 /**
@@ -23,5 +25,31 @@ public class ProductosController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+    @FXML
+    public void pantallaPrincipal() throws IOException{
+        //changeScene(Scenes.PEDIDOS);
+       // setRoot("fxml/Pedidos");
+    }
+    
+    @FXML
+    public void salir(){
+        System.exit(0);
+    }
+    @FXML
+    public void nuevoProducto() throws IOException{
+        //setRoot("fxml/Cliente");
+    }
+    @FXML
+    public void guardarProducto() throws IOException{
+       //setRoot("fxml/Repartidor");
+    }
+    @FXML
+    public void actualizarProducto() throws IOException{
+        //setRoot("fxml/Producto");
+    }
+    @FXML
+    public void borrarProducto() throws IOException{
+       // setRoot("fxml/Producto");
+    }
     
 }

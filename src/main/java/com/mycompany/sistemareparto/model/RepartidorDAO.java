@@ -17,6 +17,7 @@ public class RepartidorDAO implements CRUD{
     Conexion cn=new Conexion();
     PreparedStatement ps;
     ResultSet rs;
+    
 
     @Override
     public int add(Object element) {
@@ -24,7 +25,7 @@ public class RepartidorDAO implements CRUD{
         if(element instanceof Repartidor){
         Repartidor rp=(Repartidor) element;
         
-        String sql="insert into repartidor (nombre, turno) values(?,?)";
+        String sql="insert into repartidor (nombre, turno, idMoto) values(?,?,?)";
         
        try{
        //conexion
@@ -33,6 +34,7 @@ public class RepartidorDAO implements CRUD{
        ps=con.prepareStatement(sql);
        ps.setString(1,rp.getNombre());
        ps.setString(2,rp.getTurno());
+       ps.setInt(3,rp.getMoto().getId());
        //ejecutamos
        r=ps.executeUpdate();
        }catch(SQLException ex) {
@@ -47,13 +49,14 @@ public class RepartidorDAO implements CRUD{
         int r=0;
         if(element instanceof Repartidor){
             Repartidor rp=(Repartidor) element;
-            String sql="update repartidor set nombre=?, turno=? where idRepartidor=?";
+            String sql="update repartidor set nombre=?, turno=?, idMoto=? where idRepartidor=?";
             try{
             con=cn.Conectar();
             ps=con.prepareStatement(sql);
             ps.setString(1, rp.getNombre());
             ps.setString(2, rp.getTurno());
-            ps.setInt(3, rp.getId());
+            ps.setInt(3, rp.getMoto().getId());
+            ps.setInt(4, rp.getId());
             r=ps.executeUpdate();
             }
             catch(SQLException ex){
@@ -94,10 +97,10 @@ public class RepartidorDAO implements CRUD{
             Repartidor rp=new Repartidor();
             rp.setId(rs.getInt(1));
             rp.setNombre(rs.getString(2));
-            rp.setTurno(rs.getString(3));
+            rp.setTurno(rs.getString(3));                                       
             elementos.add(rp);
         }
-            
+        con.close();
         }catch (SQLException ex){
             Logger.getLogger(RepartidorDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
