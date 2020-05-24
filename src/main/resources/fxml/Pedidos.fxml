@@ -7,7 +7,6 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
@@ -26,33 +25,44 @@
             </TableView>
          </children>
       </Pane>
-      <Pane layoutY="2.0" prefHeight="196.0" prefWidth="600.0">
+      <Pane prefHeight="196.0" prefWidth="600.0">
          <children>
             <TextArea layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="115.0" promptText="Cliente">
                <opaqueInsets>
                   <Insets left="30.0" top="10.0" />
                </opaqueInsets>
             </TextArea>
-            <TextField layoutX="146.0" layoutY="20.0" prefHeight="25.0" prefWidth="115.0" />
             <TextArea layoutX="14.0" layoutY="60.0" prefHeight="25.0" prefWidth="115.0" promptText="Repartidor">
                <opaqueInsets>
                   <Insets left="30.0" top="10.0" />
                </opaqueInsets>
             </TextArea>
-            <TextField layoutX="146.0" layoutY="67.0" prefHeight="25.0" prefWidth="115.0" />
-            <Button layoutX="266.0" layoutY="20.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="68.0" text="Buscar" />
-            <Button layoutX="266.0" layoutY="66.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="68.0" text="Buscar" />
+            <Button layoutX="266.0" layoutY="20.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="68.0" text="Establecer" />
+            <Button layoutX="266.0" layoutY="66.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="68.0" text="Establecer" />
             <TextArea layoutX="14.0" layoutY="106.0" prefHeight="25.0" prefWidth="115.0" promptText="Producto">
                <opaqueInsets>
                   <Insets left="30.0" top="10.0" />
                </opaqueInsets>
             </TextArea>
-            <SplitMenuButton layoutX="163.0" layoutY="20.0" mnemonicParsing="false" text="Clientes" textAlignment="CENTER">
+            <SplitMenuButton layoutX="137.0" layoutY="21.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="107.0" text="Clientes" textAlignment="CENTER">
               <items>
                 <MenuItem mnemonicParsing="false" text="Action 1" />
                 <MenuItem mnemonicParsing="false" text="Action 2" />
               </items>
             </SplitMenuButton>
+            <SplitMenuButton layoutX="137.0" layoutY="67.0" mnemonicParsing="false" text="Repartidores" textAlignment="CENTER">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem mnemonicParsing="false" text="Action 2" />
+               </items>
+            </SplitMenuButton>
+            <SplitMenuButton layoutX="137.0" layoutY="113.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="107.0" text="Productos" textAlignment="CENTER">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                  <MenuItem mnemonicParsing="false" text="Action 2" />
+               </items>
+            </SplitMenuButton>
+            <Button layoutX="266.0" layoutY="113.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="68.0" text="Añadir" />
          </children>
       </Pane>
       <Button layoutX="59.0" layoutY="236.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="68.0" text="Nuevo" />
